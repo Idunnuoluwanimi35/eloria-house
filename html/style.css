@@ -1,0 +1,231 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #120822; /* Deep Dark Royal Purple */
+    color: #f3e8ff;
+}
+
+.announcement-bar {
+    background-color: #7c3aed;/* Bright Vivid Purple*/
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-bottom: 2px solid #8c35b5;
+}
+header {
+    background-color: #2b0c3f;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #8c35b5;
+}
+#brand-logo img {
+    height: 100px;
+    border-radius: 50%;
+}
+nav a{
+    color: #d8b4fe;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+nav a{
+    color: #ffffff;
+}
+#hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2b0c3f, #4a155c);
+    border-bottom: 2px solid #8c35b5;
+}
+#hero-section h1 {
+    font-size: 2.5rem;
+    color: #d8b4fe;
+    margin-bottom: 10px;
+
+}
+#hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #8c35b5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#hero-button:hover{
+    background-color: #a855f7;
+
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+}
+.section-title {
+    color: #d8b4fe;
+    border-bottom: 2px solid #8c35b5;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: #2b0c3f;
+    border: 2px solid #8c35b5;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+
+
+}
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 10px 0;
+
+}
+.buy-btn {
+    background-color: #8c35b5;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+
+}
+.buy-btn:hover {
+    background-color: #a855f7;
+
+}
+.cart-summary {
+    background-color: #2b0c3f;
+    border: 2px dashed #8c35b5;
+    border-radius: 14px;
+    padding: 25px;
+}
+#cart-items {
+    list-style-type:none;
+    padding: 0;
+    margin: 10px 0;
+
+}
+#cart-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(216, 180, 254, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #120822;
+    border-top: 2px solid #2b0c3f;
+    color: #d8b4fe;
+    margin-top: 40px;
+}
+/* Trendy Notification Toast */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #5a2d82;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    position: fixed;
+    z-index: 1000;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 8px 32px 0 rgba(90, 45, 130, 0.3);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+#countdown-timer {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(90, 45, 130, 0.85);
+    backdrop-filter: blur(10px);
+}
+.product-card img {
+    transition: transform 0.3s ease;
+}
+.product-card:hover img {
+    transform: scale(1.05);
+}
+.flash-sale-section {
+    background-color: rgba(90, 45, 130, 0.15);
+    border: 1px solid #8c35b5;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.flash-sale-section h2 {
+    color: #8c35b5;
+    margin-bottom: 10px;
+}
+
+#countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
