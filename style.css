@@ -1,0 +1,369 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #120822; /* Deep Dark Royal Purple */
+    color: #f3e8ff;
+}
+
+.announcement-bar {
+    background-color: #7c3aed;/* Bright Vivid Purple*/
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-bottom: 2px solid #8c35b5;
+}
+header {
+    background-color: #2b0c3f;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #8c35b5;
+}
+#brand-logo img {
+    height: 100px;
+    border-radius: 50%;
+}
+nav a{
+    color: #d8b4fe;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+nav a{
+    color: #ffffff;
+}
+#hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2b0c3f, #4a155c);
+    border-bottom: 2px solid #8c35b5;
+}
+#hero-section h1 {
+    font-size: 2.5rem;
+    color: #d8b4fe;
+    margin-bottom: 10px;
+
+}
+#hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #8c35b5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#hero-button:hover{
+    background-color: #a855f7;
+
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+}
+.section-title {
+    color: #d8b4fe;
+    border-bottom: 2px solid #8c35b5;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: #2b0c3f;
+    border: 2px solid #8c35b5;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+
+
+}
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 10px 0;
+
+}
+.buy-btn {
+    background-color: #8c35b5;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+
+}
+.buy-btn:hover {
+    background-color: #a855f7;
+
+}
+.cart-summary {
+    background-color: #2b0c3f;
+    border: 2px dashed #8c35b5;
+    border-radius: 14px;
+    padding: 25px;
+}
+#cart-items {
+    list-style-type:none;
+    padding: 0;
+    margin: 10px 0;
+
+}
+#cart-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(216, 180, 254, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #120822;
+    border-top: 2px solid #2b0c3f;
+    color: #d8b4fe;
+    margin-top: 40px;
+}
+/* Trendy Notification Toast */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #5a2d82;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    position: fixed;
+    z-index: 1000;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 8px 32px 0 rgba(90, 45, 130, 0.3);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+#countdown-timer {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(90, 45, 130, 0.85);
+    backdrop-filter: blur(10px);
+}
+.product-card img {
+    transition: transform 0.3s ease;
+}
+.product-card:hover img {
+    transform: scale(1.05);
+}
+.flash-sale-section {
+    background-color: rgba(90, 45, 130, 0.15);
+    border: 1px solid #8c35b5;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.flash-sale-section h2 {
+    color: #8c35b5;
+    margin-bottom: 10px;
+}
+
+#countdown-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* --- 1. Quick-View Modal Styles --- */
+.eloria-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(12px);
+  display: flex; justify-content: center; align-items: center;
+  opacity: 0; pointer-events: none; transition: all 0.3s ease;
+  z-index: 2000;
+}
+.eloria-modal-overlay.active {
+  opacity: 1; pointer-events: auto;
+}
+.eloria-modal-content {
+  background: #14141c;
+  border: 1px solid #8c35b5;
+  border-radius: 12px;
+  width: 90%; max-width: 700px;
+  padding: 30px; position: relative;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.close-modal-btn {
+  position: absolute; top: 15px; right: 20px;
+  background: none; border: none; color: #fff; font-size: 24px; cursor: pointer;
+}
+.modal-body-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;
+}
+.modal-img-area img {
+  width: 100%; border-radius: 8px; border: 1px solid #8c35b5;
+}
+.modal-price {
+  color: #8c35b5; font-size: 1.2rem; font-weight: bold; margin: 10px 0;
+}
+.eloria-select {
+  width: 100%; padding: 10px; background: #1a1a24; border: 1px solid #8c35b5;
+  color: #fff; border-radius: 6px; margin: 10px 0 20px 0;
+}
+.eloria-action-btn {
+  width: 100%; padding: 12px; background: #8c35b5; color: #fff; border: none;
+  border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.2s;
+}
+.eloria-action-btn:hover { background: #732994; }
+
+/* --- 2. Recent Purchase Toast Styles --- */
+.luxury-toast {
+  position: fixed; bottom: 30px; left: 30px;
+  background: rgba(20, 20, 28, 0.9);
+  border: 1px solid #8c35b5; color: #fff;
+  padding: 14px 22px; border-radius: 8px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: translateY(120px); opacity: 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1500; font-size: 0.9rem;
+}
+.luxury-toast.show { transform: translateY(0); opacity: 1; }
+
+/* --- 3. Floating Controls & Light Mode Variables --- */
+.floating-controls {
+  position: fixed; bottom: 30px; right: 30px;
+  display: flex; gap: 10px; z-index: 1500;
+}
+.control-bubble {
+  background: #14141c; border: 1px solid #8c35b5; color: #fff;
+  width: 45px; height: 45px; border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer; font-size: 0.8rem; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.control-bubble:hover { transform: scale(1.1); }
+
+/* Light Mode Theme Overrides */
+body.light-mode {
+  background-color: #f8f9fa !important;
+  color: #1a1a24 !important;
+}
+body.light-mode .eloria-modal-content,
+body.light-mode .luxury-toast,
+body.light-mode .control-bubble {
+  background: #ffffff !important;
+  color: #1a1a24 !important;
+  border-color: #8c35b5;
+}
+/* --- Wishlist Sidebar Drawer Styles --- */
+.wishlist-drawer {
+  position: fixed; top: 0; right: -400px; width: 350px; height: 100%;
+  background: #14141c; border-left: 1px solid #8c35b5; z-index: 2500;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5); transition: right 0.4s ease;
+  padding: 25px; color: #fff; box-sizing: border-box;
+}
+.wishlist-drawer.open { right: 0; }
+.wishlist-header {
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(140, 53, 181, 0.3); padding-bottom: 15px;
+}
+.wishlist-items-container { margin-top: 20px; overflow-y: auto; max-height: 80vh; }
+
+/* --- Floating WhatsApp Concierge Styles --- */
+.whatsapp-concierge {
+  position: fixed; bottom: 30px; left: 30px;
+  background: #25d366; color: #fff; width: 55px; height: 55px;
+  border-radius: 50%; display: flex; justify-content: center; align-items: center;
+  font-size: 26px; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1500; transition: transform 0.3s; text-decoration: none;
+}
+.whatsapp-concierge:hover { transform: scale(1.1); }
+.vip-gated-container {
+  background: #14141c;
+  border: 1px solid #ffd700;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.vip-lock-screen h2 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.vip-lock-screen p {
+  color: #d8b4fe;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.vip-input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Eloria | 👑YOUR NEW STANDARD OF LUXURY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+    <!-- Back-to-School Sales Banner -->
+     <div class="announcement-bar">
+        🎉🎊 Back-to-School Sales Live Now! Enjoy student-friendly prices, flexible installments payments, and stress-free delivery! 🚀✨
+
+     </div>
+     <br>
+    
+     <!-- Header/Navigation -->
+      <header>
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="House of Eloria Logo" style="height: 100px;">
+        </div>
+        <nav>
+            <a href="#catalog">🛍️ Catalog</a>
+            <a href="#about">ℹ️ About</a>
+            <a href="https://chat.whatsapp.com/Diej6iaZH6A4trmT1UIx14?s=cl&p=a&ilr=4" target="_blank" class="wa-nav-link">💬 Join Community</a>
+            <a href="#cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+
+      </header>
+
+       <br>
+    <!-- About Section -->
+     <section id="about" class="container" style="background-color: #2b0c3f; border: 2px solid #8c35b5; border-radius: 14px; padding: 25px; text-align: center;">
+        <h2 style="color: #d8b4fe; margin-bottom: 15px;"> About House of Eloria✨</h2>
+        <p style="color: #f3e8ff; line-height: 1.6; max-width: 800px; margin: 0 auto;">Welcome to the House of Eloria,your ultimate destination for luxury, quality, and elegance. We bring you premium style and exceptional pieces designed to make you stand out. All in one place, we are more than a brand-we are an experience💜</p>
+     </section>
+      
+      <!-- Hero Section -->\
+       <section class="hero">
+        <h1>✨House of Eloria✨</h1>
+        <p class="tagline">💎 Your New Standard of Luxury💎</p>
+        <p>💜 Luxury. Quality. Elegance. All in one place. We are more than a brand, we are an experience.🛍️🔥</p>
+        <a href="#catalog" class="hero-btn">🚀🛍️Shop Now</a>
+        <!-- Event Section -->
+         <section id="event" class="event-section" style="padding: 40px 20px; text-align: center; background-color: #1a102f;">
+            <h2 style="color: #f5f3ff; margin-bottom: 15px;">📅 Back-to-School Sales Event</h2>
+            <p style="color: #d8b4fe; margin-bottom: 20px;">📅 **Date:** 18th August - 7th September</p>
+
+            <!-- Replace 'event-flyer.jpg' with your actual event image file name-->
+             <div style="margin-top: 15px;">
+                <img src="./images/events.jpg" alt=" Back-to-School Sales Flyer" style="max-width: 100%; height: auto; border-radius: 12px; border: 2px solid #8c35b5;">
+
+             </div>
+
+         </section>
+         <section class="flash-sale-section">
+            <h2>⚡ Flash Sale Ends In: ⚡</h2>
+             <div id="countdown-timer">100:00:00</div>
+              <p>Grab your luxury favorites before they sell out!</p>
+         </section>
+
+
+       </section>
+       <!-- Product Catalogue Section -->
+        <section id="catalog" style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+            <h2 style="color: #d8b4fe; border-bottom: 2px solid #8c35b5; padding-bottom: 8px; margin-bottom: 30px;">🛍️ Shop Your Favorites💖</h2>
+            <div cla>
+                <!-- Category 1: Fashion -->
+                 <div class="product-card">
+                    <h3>👕 Basic Tops</h3>
+                    <img src="./images/top1.jpg" alt="Basic Tops" class="product-img" height="300" width="300">
+                    <img src="./images/top2.jpg" alt="Basic Tops" class="product-img" height="300" width="300">
+                    <p class="description">✨ Trendy styles starting from 3k upward.</p>
+                    <p class="price">₦3,000.00</p>
+                    <button onclick="addToCart('Basic Tops', 3000)" class="buy-btn">Add to Cart🛒</button>
+                    <button onclick="addToWishlist('House of Eloria Luxury Piece')" class="eloria-action-btn">
+  Save to Wishlist ❤️
+</button>
+<button onclick="openQuickView('Basic Tops', '₦3,000.00', './images/top1.jpg')" class="eloria-action-btn">Quick View</button>
+                 
+
+         <!-- 1. Quick-View Modal Overlay -->
+<div id="quickViewModal" class="eloria-modal-overlay">
+  <div class="eloria-modal-content">
+    <button class="close-modal-btn" onclick="closeQuickView()">&times;</button>
+    <div class="modal-body-grid">
+      <div class="modal-img-area">
+        <img src="./images/events.jpg" alt="Eloria Product" id="modalProductImg">
+      </div>
+      <div class="modal-info-area">
+        <h3 id="modalProductName">House of Eloria Luxury Piece</h3>
+        <p class="modal-price" id="modalProductPrice">$250.00</p>
+        <p class="modal-desc">Handcrafted with precision, premium fabric, and designed for timeless elegance.</p>
+        
+        <label for="sizeSelect">Select Size:</label>
+        <select id="sizeSelect" class="eloria-select">
+          <option value="S">Small (S)</option>
+          <option value="M">Medium (M)</option>
+          <option value="L">Large (L)</option>
+        </select>
+
+        <button class="eloria-action-btn" onclick="addToBagFromModal()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+                 <!-- Product 2 -->
+                  <div class="product-card">
+                    <h3>Necklaces & Bracelets</h3>
+                    <img src="./images/jew1.jpg" alt="Jewelry" class="product-img" height="300">
+                    <img src="./images/jew2.jpg" alt="Jewelry" class="product-img" height="300">
+                    <p>Dainty luxury pieces to complete your fit.</p>
+                    <p class="price">₦2,500.00</p>
+                    <button onclick="addToCart('Necklaces & Bracelets', 2500)" class="buy-btn">Add to Cart🛒</button>
+
+                    <button onclick="addToWishlist('House of Eloria Luxury Piece')" class="eloria-action-btn">
+  Save to Wishlist ❤️
+</button>
+
+
+                  </div>
+            </div>
+        </section>
+        <!-- Cart Summary Section -->
+         <section id="cart" class="container cart-summary">
+            <h3>🛒 Your Shopping Bag</h3>
+            <ul id="cart-items">
+                <li><em>Your cart is currently empty</em></li>
+            </ul>
+            <p style="font-size: 1.1rem; margin-top: 15px;"><strong>Total:</strong>₦<span id="cart-total">0.00</span></p>
+            <button onclick="checkoutViaWhatsapp()" class="buy-btn" style="margin-top: 15px; background-color: #25D366; color: white;">Checkout via Whatsapp 💬</button>
+         </section>
+         <button onclick="shareStore()" style="background: #2b0c3f; color: #d8b4fe; border: 1px solid #8c35b5; padding: 6px 12px; border-radius: 6px; cursor: pointer;">🔗Share Store</button>
+         
+
+<!-- 2. Live Recent Purchase Toast Notification -->
+<div id="luxuryToast" class="luxury-toast">
+  <span id="toastText">✨ Amina from Owo just secured an item!</span>
+</div>
+
+<!-- 3. Floating Theme & Currency Controls -->
+<div class="floating-controls">
+  <button class="control-bubble" onclick="toggleTheme()" title="Toggle Theme">🌓</button>
+  <button class="control-bubble" onclick="toggleCurrency()" id="currencyBtn" title="Change Currency">USD ($)</button>
+</div>
+
+<!-- 1. Size & Fit Guide Quiz Modal -->
+<div id="sizeQuizModal" class="eloria-modal-overlay">
+  <div class="eloria-modal-content">
+    <button class="close-modal-btn" onclick="closeSizeQuiz()">&times;</button>
+    <h3>✨ Find Your Perfect Eloria Fit</h3>
+    <p>Enter your measurements for an instant size recommendation.</p>
+    <label>Height (cm):</label>
+    <input type="number" id="userHeight" class="eloria-select" placeholder="e.g. 170">
+    <label>Weight (kg):</label>
+    <input type="number" id="userWeight" class="eloria-select" placeholder="e.g. 65">
+    <button class="eloria-action-btn" onclick="calculateSize()">Get My Size</button>
+    <p id="sizeResult" style="margin-top: 15px; font-weight: bold; color: #8c35b5;"></p>
+  </div>
+</div>
+
+<!-- 2. Wishlist Sidebar Drawer -->
+<div id="wishlistDrawer" class="wishlist-drawer">
+  <div class="wishlist-header">
+    <h3>Your Luxury Wishlist (<span id="wishlistCount">0</span>)</h3>
+    <button class="close-modal-btn" onclick="toggleWishlistDrawer()">&times;</button>
+  </div>
+  <div id="wishlistItems" class="wishlist-items-container">
+    <p style="color: #a0a0a0; text-align: center; margin-top: 40px;">Your wishlist is empty.</p>
+  </div>
+</div>
+
+
+
+<!-- 4. Floating WhatsApp Concierge Button -->
+<a href="https://api.whatsapp.com/send?phone=2347067051873&text=Hello%20House%20of%20Eloria,%20I%20need%20styling%20assistance." target="_blank" class="whatsapp-concierge" title="Chat with Style Concierge">
+  💬
+</a>
+
+<!-- Trigger Buttons for Quiz & Wishlist (Place anywhere in your navigation or header) -->
+<div class="extra-nav-triggers" style="text-align: center; margin: 15px 0;">
+  <button onclick="openSizeQuiz()" style="background:none; border:1px solid #8c35b5; color:#fff; padding:6px 12px; border-radius:5px; cursor:pointer; margin-right:10px;">Size Guide</button>
+  <button onclick="toggleWishlistDrawer()" style="background:none; border:1px solid #8c35b5; color:#fff; padding:6px 12px; border-radius:5px; cursor:pointer;">❤️ Wishlist</button>
+</div>
+
+
+         <!-- Footer -->
+          <footer>
+            <p>✨ LUXURY. QUALITY. ELEGANCE. ALL IN ONE PLACE.✨</p>
+            <p style="margin-top: 10px;">Order via Whatsapp: <strong>07067051873</strong></p>
+          </footer>
+          <div id="toast">Item added to cart successfully! ✨</div>
+          <script src="script.js"></script>
+</body>
+</html>
